@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('cañoneras', function () {
+    return view('cañoneras');
+});
+
+Route::get('personas', function () {
+    return view('cañoneras');
+});
+
+Route::get('facultades', function () {
+    return view('cañoneras');
+});

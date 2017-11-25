@@ -5,5 +5,8 @@
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// Bootstrap (Precompiled css)
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+// App styles
+@import "bootstrap-overrides";
