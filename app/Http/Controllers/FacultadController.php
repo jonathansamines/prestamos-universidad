@@ -10,8 +10,8 @@ class FacultadController extends Controller
         return view('facultades/index');
     }
 
-    public function nuevo() {
-        return view('facultades/nuevo');
+    public function crear() {
+        return view('facultades/crear');
     }
 
     public function editar($id) {

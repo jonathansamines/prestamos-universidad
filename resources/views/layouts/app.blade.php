@@ -19,16 +19,16 @@
         <nav>
           <ul class="nav nav-pills float-right">
             <li class="nav-item">
-              <a class="nav-link active" href="{{ url('/') }}">Prestamos <span class="sr-only">(current)</span></a>
+              <a class="nav-link {{isActiveRoute('prestamos.*', 'active')}}" href="{{ route('prestamos.index') }}">Prestamos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('cañoneras') }}">Cañoneras</a>
+              <a class="nav-link {{isActiveRoute('cañoneras.*', 'active')}}" href="{{ route('cañoneras.index') }}">Cañoneras</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('personas') }}">Personas</a>
+              <a class="nav-link {{isActiveRoute('personas.*', 'active')}}" href="{{ route('personas.index') }}">Personas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url('facultades') }}">Facultades</a>
+              <a class="nav-link {{isActiveRoute('facultades.*', 'active')}}" href="{{ route('facultades.index') }}">Facultades</a>
             </li>
           </ul>
         </nav>

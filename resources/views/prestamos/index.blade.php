@@ -4,7 +4,7 @@
     <aside class="toolbar">
         <h3 class="toolbar-title">Prestamo de Cañoneras</h3>
         <div class="toolbar-content">
-            <a href="{{ url('prestamos/nuevo') }}" role="button" class="btn btn-outline-success">Nuevo Préstamo</a>
+            <a href="{{ route('prestamos.crear') }}" role="button" class="btn btn-outline-success">Nuevo Préstamo</a>
         </div>
     </aside>
     <section>
@@ -33,10 +33,10 @@
                     <td>@mdo</td>
                     <td>Mark</td>
                     <td>
-                        <a href="{{ url('prestamos/editar') }}" class="btn btn-sm btn-outline-info">
+                        <a href="{{ route('prestamos.editar', 1) }}" class="btn btn-sm btn-outline-info">
                             <span class="oi oi-pencil"></span>
                         </a>
-                        <a href="{{ url('prestamos/eliminar') }}" class="btn btn-sm btn-outline-danger">
+                        <a href="{{ route('prestamos.eliminar', 1) }}" class="btn btn-sm btn-outline-danger">
                             <span class="oi oi-trash"></span>
                         </a>
                     </td>

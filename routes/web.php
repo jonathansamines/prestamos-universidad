@@ -13,30 +13,100 @@
 
 Route::redirect('/', '/prestamos');
 
-Route::group([ 'prefix' => 'prestamos'], function() {
-    Route::get('/', 'PrestamoController@index');
-    Route::get('/nuevo', 'PrestamoController@nuevo');
-    Route::get('/eliminar/{id}', 'PrestamoController@eliminar');
-    Route::get('/editar/{id}', 'PrestamoController@editar');
+Route::group([ 'prefix' => 'prestamos', 'as' => 'prestamos.'], function() {
+    Route::get('/', [
+        'uses' => 'PrestamoController@index',
+        'as' => 'index'
+    ]);
+
+    Route::get('/crear', [
+        'uses' => 'PrestamoController@crear',
+        'as' => 'crear'
+    ]);
+
+    Route::get('/eliminar/{id}', [
+        'uses' => 'PrestamoController@eliminar',
+        'as' => 'eliminar'
+    ]);
+
+    Route::get('/editar/{id}', [
+        'uses' => 'PrestamoController@editar',
+        'as' => 'editar'
+    ]);
 });
 
-Route::group([ 'prefix' => 'cañoneras'], function() {
-    Route::get('/', 'CañoneraController@index');
-    Route::get('/nuevo', 'CañoneraController@nuevo');
-    Route::get('/eliminar/{id}', 'CañoneraController@eliminar');
-    Route::get('/editar/{id}', 'CañoneraController@editar');
+Route::group([ 'prefix' => 'cañoneras', 'as' => 'cañoneras.'], function() {
+    Route::get('/', [
+        'uses' => 'CañoneraController@index',
+        'as' => 'index'
+    ]);
+
+    Route::get('/crear', [
+        'uses' => 'CañoneraController@crear',
+        'as' => 'crear'
+    ]);
+
+    Route::post('/crear', [
+        'uses' => 'CañoneraController@crearCañonera',
+        'as' => 'action.crear'
+    ]);
+
+    Route::get('/eliminar/{id}', [
+        'uses' => 'CañoneraController@eliminar',
+        'as' => 'eliminar'
+    ]);
+
+    Route::get('/editar/{id}', [
+        'uses' => 'CañoneraController@editar',
+        'as' => 'editar'
+    ]);
+
+    Route::post('/editar/{id}', [
+        'uses' => 'CañoneraController@editarCañonera',
+        'as' => 'action.editar'
+    ]);
 });
 
-Route::group([ 'prefix' => 'personas'], function() {
-    Route::get('/', 'PersonaController@index');
-    Route::get('/nuevo', 'PersonaController@nuevo');
-    Route::get('/eliminar/{id}', 'PersonaController@eliminar');
-    Route::get('/editar/{id}', 'PersonaController@editar');
+Route::group([ 'prefix' => 'personas', 'as' => 'personas.'], function() {
+    Route::get('/', [
+        'uses' => 'PersonaController@index',
+        'as' => 'index'
+    ]);
+
+    Route::get('/crear', [
+        'uses' => 'PersonaController@nuevo',
+        'as' => 'crear'
+    ]);
+
+    Route::get('/eliminar/{id}', [
+        'uses' => 'PersonaController@eliminar',
+        'as' => 'eliminar'
+    ]);
+
+    Route::get('/editar/{id}', [
+        'uses' => 'PersonaController@editar',
+        'as' => 'editar'
+    ]);
 });
 
-Route::group([ 'prefix' => 'facultades'], function() {
-    Route::get('/', 'FacultadController@index');
-    Route::get('/nuevo', 'FacultadController@nuevo');
-    Route::get('/eliminar/{id}', 'FacultadController@eliminar');
-    Route::get('/editar/{id}', 'FacultadController@editar');
+Route::group([ 'prefix' => 'facultades', 'as' => 'facultades.'], function() {
+    Route::get('/', [
+        'uses' => 'FacultadController@index',
+        'as' => 'index'
+    ]);
+
+    Route::get('/crear', [
+        'uses' => 'FacultadController@nuevo',
+        'as' => 'crear'
+    ]);
+
+    Route::get('/eliminar/{id}', [
+        'uses' => 'FacultadController@eliminar',
+        'as' => 'eliminar'
+    ]);
+
+    Route::get('/editar/{id}', [
+        'uses' => 'FacultadController@editar',
+        'as' => 'editar'
+    ]);
 });

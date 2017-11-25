@@ -3,23 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cañonera;
 
 class CañoneraController extends Controller
 {
     public function index() {
-        return view('cañoneras/index');
+        $cañoneras = Cañonera::all();
+        return view('cañoneras/index', compact('cañoneras'));
     }
 
-    public function nuevo() {
-        return view('cañoneras/nuevo');
+    public function crear() {
+        return view('cañoneras/crear');
+    }
+
+    public function crearCañonera($cañonera) {
+        Cañonera::new($cañonera);
+
+        return redirect('cañoneras/index');
     }
 
     public function editar($id) {
-        // TODO: Leer datos cañonera y enviar al context
-        return view('cañoneras/editar');
+        $cañonera = Cañonera::find($id);
+
+        return view('cañoneras/editar', compact('cañonera'));
     }
 
     public function eliminar($id) {
-        // TODO Eliminar cañonera y redirigir
+        Cañonera::delete($id);
+
+        return redirect('cañoneras/index');
     }
 }

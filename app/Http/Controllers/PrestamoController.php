@@ -10,11 +10,11 @@ class PrestamoController extends Controller
         return view('prestamos/index');
     }
 
-    public function nuevo() {
+    public function crear() {
         // TODO: Leer facultades
         // leer personas
         // leer cañoneras
-        return view('prestamos/nuevo');
+        return view('prestamos/crear');
     }
 
     public function editar($id) {

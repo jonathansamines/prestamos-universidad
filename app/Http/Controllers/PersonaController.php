@@ -10,8 +10,8 @@ class PersonaController extends Controller
         return view('personas/index');
     }
 
-    public function nuevo() {
-        return view('personas/nuevo');
+    public function crear() {
+        return view('personas/crear');
     }
 
     public function editar($id) {
