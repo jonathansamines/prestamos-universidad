@@ -32,7 +32,12 @@
             </li>
           </ul>
         </nav>
-        <h3 class="text-muted">Sistema de Prestamos</h3>
+        <h3 class="text-muted">
+          <figure class="logo">
+            <img width="90px" height="75px" src="{{asset('images/logo.png')}}" alt="Sistema de Prestamos">
+            Sistema de Prestamos
+          </figure>
+        </h3>
       </header>
 
       <main role="main">
@@ -42,8 +47,10 @@
       <footer class="footer">
         @section('footer')
             <p>&copy; Jonathan Rai Samines Solares - 6590-13-38-13</p>
-        @endsection
+        @show
       </footer>
     </div> <!-- /container -->
+
+    <script src="{{asset('js/app.js')}}"></script>
   </body>
 </html>
