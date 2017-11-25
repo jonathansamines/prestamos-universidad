@@ -42,6 +42,18 @@
                 <textarea class="form-control" name="observaciones" id="observaciones" placeholder="Ingrese observaciones respecto al prestamo" required></textarea>
             </div>
             <div class="form-group">
+                <label for="tiene_cable_poder">Tiene Cable de Poder</label>
+                <input type="checkbox" class="form-control" name="tiene_cable_poder" id="tiene_cable_poder">
+            </div>
+            <div class="form-group">
+                <label for="tiene_cable_video">Tiene Cable de Video</label>
+                <input type="checkbox" class="form-control" name="tiene_cable_video" id="tiene_cable_video">
+            </div>
+            <div class="form-group">
+                <label for="tiene_estuche">Tiene Estuche</label>
+                <input type="checkbox" class="form-control" name="tiene_estuche" id="tiene_estuche">
+            </div>
+            <div class="form-group">
                 <button type="submit" class="btn btn-primary">Crear Prestamo</button>
             </div>
         </fieldset>

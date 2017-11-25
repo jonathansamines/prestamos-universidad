@@ -30,6 +30,9 @@
             <li class="nav-item">
               <a class="nav-link {{isActiveRoute('facultades.*', 'active')}}" href="{{ route('facultades.index') }}">Facultades</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link {{isActiveRoute('incidentes.*', 'active')}}" href="{{ route('incidentes.index') }}">Incidentes</a>
+            </li>
           </ul>
         </nav>
         <h3 class="text-muted">

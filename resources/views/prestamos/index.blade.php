@@ -19,6 +19,9 @@
                     <th scope="col">Responsable</th>
                     <th scope="col">Cañonera asignada</th>
                     <th scope="col">Observaciones</th>
+                    <th scope="col">Cable poder?</th>
+                    <th scope="col">Cable de video?</th>
+                    <th scope="col">Estuche?</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -33,6 +36,9 @@
                         <td>{{$prestamo->responsable->nombre}}</td>
                         <td>{{$prestamo->cañonera->descripcion()}}</td>
                         <td>{{$prestamo->observaciones}}</td>
+                        <td>{{$prestamo->tiene_cable_poder ? 'Si' : 'No'}}</td>
+                        <td>{{$prestamo->tiene_cable_video ? 'Si' : 'No'}}</td>
+                        <td>{{$prestamo->tiene_estuche ? 'Si' : 'No'}}</td>
                         <td>
                             <a title="Editar Información" href="{{ route('prestamos.editar', $prestamo->id) }}" class="btn btn-sm btn-outline-info">
                                 <span class="oi oi-pencil"></span>

@@ -34,6 +34,9 @@ class PrestamoController extends Controller
             'id_facultad' => request('id_facultad'),
             'id_cañonera' => request('id_cañonera'),
             'id_responsable' => request('id_responsable'),
+            'tiene_cable_poder' => request('tiene_cable_poder') == 'on',
+            'tiene_cable_video' => request('tiene_cable_video') == 'on',
+            'tiene_estuche' => request('tiene_estuche') == 'on',
             'observaciones' => request('observaciones')
         ]);
 
@@ -61,6 +64,9 @@ class PrestamoController extends Controller
         $prestamo->id_responsable = request('id_responsable');
         $prestamo->id_cañonera = request('id_cañonera');
         $prestamo->observaciones = request('observaciones');
+        $prestamo->tiene_cable_poder = request('tiene_cable_poder') == 'on';
+        $prestamo->tiene_cable_video = request('tiene_cable_video') == 'on';
+        $prestamo->tiene_estuche = request('tiene_estuche') == 'on';
 
         $prestamo->save();
 

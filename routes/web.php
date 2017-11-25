@@ -140,3 +140,35 @@ Route::group([ 'prefix' => 'facultades', 'as' => 'facultades.'], function() {
         'as' => 'action.editar'
     ]);
 });
+
+Route::group([ 'prefix' => 'incidentes', 'as' => 'incidentes.'], function() {
+    Route::get('/', [
+        'uses' => 'IncidenteController@index',
+        'as' => 'index'
+    ]);
+
+    Route::get('/crear', [
+        'uses' => 'IncidenteController@crear',
+        'as' => 'crear'
+    ]);
+
+    Route::post('/crear', [
+        'uses' => 'IncidenteController@crearIncidente',
+        'as' => 'action.crear'
+    ]);
+
+    Route::get('/eliminar/{id}', [
+        'uses' => 'IncidenteController@eliminar',
+        'as' => 'eliminar'
+    ]);
+
+    Route::get('/editar/{id}', [
+        'uses' => 'IncidenteController@editar',
+        'as' => 'editar'
+    ]);
+
+    Route::post('/editar/{id}', [
+        'uses' => 'IncidenteController@editarIncidente',
+        'as' => 'action.editar'
+    ]);
+});
