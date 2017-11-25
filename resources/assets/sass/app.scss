@@ -1,6 +1,7 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "open-iconic-bootstrap";
 
 // Variables
 @import "variables";
@@ -9,4 +10,6 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 // App styles
+@import "toolbar";
+@import "tables";
 @import "bootstrap-overrides";

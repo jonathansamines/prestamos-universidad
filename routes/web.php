@@ -12,17 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('prestamos/index');
 });
 
 Route::get('cañoneras', function () {
-    return view('cañoneras');
+    return view('cañoneras/index');
 });
 
 Route::get('personas', function () {
-    return view('cañoneras');
+    return view('personas/index');
 });
 
 Route::get('facultades', function () {
-    return view('cañoneras');
+    return view('facultades/index');
 });

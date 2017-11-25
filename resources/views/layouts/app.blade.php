@@ -32,12 +32,11 @@
             </li>
           </ul>
         </nav>
-        <h3 class="text-muted">Prestamos</h3>
+        <h3 class="text-muted">Sistema de Prestamos</h3>
       </header>
 
       <main role="main">
-        @section('content')
-        @endsection
+        @yield('content')
       </main>
 
       <footer class="footer">
