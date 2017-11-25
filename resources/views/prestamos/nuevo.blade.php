@@ -1,3 +1,5 @@
+@extends('layouts/app')
+
 @section('content')
     <form>
         <div class="form-group">
@@ -29,4 +31,4 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
     </form>
-@show
+@endsection
