@@ -23,7 +23,7 @@
             <tbody>
                 @foreach ($cañoneras as $cañonera)
                     <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">{{$cañonera->id}}</th>
                         <td>{{$cañonera->marca}}</td>
                         <td>{{$cañonera->modelo}}</td>
                         <td>{{$cañonera->color}}</td>

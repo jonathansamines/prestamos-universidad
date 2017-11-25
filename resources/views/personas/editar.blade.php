@@ -16,8 +16,8 @@
             <div class="form-group">
                 <label for="sexo">Sexo</label>
                 <select name="sexo" id="sexo" class="form-control" required value="{{$persona->sexo}}">
-                    <option selected="{{$persona->sexo == 'M' ? 'selected' : ''}}" value="M">Masculino</option>
-                    <option selected="{{$persona->sexo == 'F' ? 'selected' : ''}}" value="F">Femenino</option>
+                    <option {{$persona->sexo == 'M' ? 'selected' : ''}} value="M">Masculino</option>
+                    <option {{$persona->sexo == 'F' ? 'selected' : ''}} value="F">Femenino</option>
                 </select>
             </div>
             <div class="form-group">

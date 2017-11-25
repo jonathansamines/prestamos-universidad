@@ -24,6 +24,11 @@ Route::group([ 'prefix' => 'prestamos', 'as' => 'prestamos.'], function() {
         'as' => 'crear'
     ]);
 
+    Route::post('/crear', [
+        'uses' => 'PrestamoController@crearPrestamo',
+        'as' => 'action.crear'
+    ]);
+
     Route::get('/eliminar/{id}', [
         'uses' => 'PrestamoController@eliminar',
         'as' => 'eliminar'
@@ -32,6 +37,11 @@ Route::group([ 'prefix' => 'prestamos', 'as' => 'prestamos.'], function() {
     Route::get('/editar/{id}', [
         'uses' => 'PrestamoController@editar',
         'as' => 'editar'
+    ]);
+
+    Route::post('/editar/{id}', [
+        'uses' => 'PrestamoController@editarPrestamo',
+        'as' => 'action.editar'
     ]);
 });
 
