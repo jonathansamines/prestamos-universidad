@@ -106,8 +106,13 @@ Route::group([ 'prefix' => 'facultades', 'as' => 'facultades.'], function() {
     ]);
 
     Route::get('/crear', [
-        'uses' => 'FacultadController@nuevo',
+        'uses' => 'FacultadController@crear',
         'as' => 'crear'
+    ]);
+
+    Route::post('/crear', [
+        'uses' => 'FacultadController@crearFacultad',
+        'as' => 'action.crear'
     ]);
 
     Route::get('/{id}/eliminar', [
@@ -118,5 +123,10 @@ Route::group([ 'prefix' => 'facultades', 'as' => 'facultades.'], function() {
     Route::get('/{id}/editar', [
         'uses' => 'FacultadController@editar',
         'as' => 'editar'
+    ]);
+
+    Route::post('/{id}/editar', [
+        'uses' => 'FacultadController@editarFacultad',
+        'as' => 'action.editar'
     ]);
 });

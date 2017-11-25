@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCañoneraTable extends Migration
+class CreateFacultadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateCañoneraTable extends Migration
      */
     public function up()
     {
-        Schema::create('cañoneras', function (Blueprint $table) {
+        Schema::create('facultades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('marca');
-            $table->string('modelo');
-            $table->string('color');
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateCañoneraTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cañoneras');
+        Schema::dropIfExists('facultades');
     }
 }
