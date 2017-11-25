@@ -15,4 +15,16 @@ class Prestamo extends Model
         'id_responsable',
         'id_cañonera',
     ];
+
+    public function facultad() {
+        return $this->hasOne('App\Facultad', 'id', 'id_facultad');
+    }
+
+    public function responsable() {
+        return $this->hasOne('App\Persona', 'id', 'id_responsable');
+    }
+
+    public function cañonera() {
+        return $this->hasOne('App\Cañonera', 'id', 'id_cañonera');
+    }
 }

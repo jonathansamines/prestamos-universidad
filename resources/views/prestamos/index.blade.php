@@ -29,9 +29,9 @@
                         <td>{{$prestamo->created_at->format('Y-M-D H:i:s')}}</td>
                         <td>{{$prestamo->hora_entrega}}</td>
                         <td>{{$prestamo->hora_devolucion}}</td>
-                        <td>{{$prestamo->id_facultad}}</td>
-                        <td>{{$prestamo->id_responsable}}</td>
-                        <td>{{$prestamo->id_cañonera}}</td>
+                        <td>{{$prestamo->facultad->nombre}}</td>
+                        <td>{{$prestamo->responsable->nombre}}</td>
+                        <td>{{$prestamo->cañonera->descripcion()}}</td>
                         <td>{{$prestamo->observaciones}}</td>
                         <td>
                             <a title="Editar Información" href="{{ route('prestamos.editar', $prestamo->id) }}" class="btn btn-sm btn-outline-info">

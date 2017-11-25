@@ -33,7 +33,7 @@
                 <label for="cañonera">Cañonera</label>
                 <select name="id_cañonera" id="cañonera" class="form-control" required>
                     @foreach($cañoneras as $cañonera)
-                        <option value="{{$cañonera->id}}">{{$cañonera->marca}} {{$cañonera->modelo}} {{$cañonera->color}}</option>
+                        <option value="{{$cañonera->id}}">{{$cañonera->descripcion()}}</option>
                     @endforeach
                 </select>
             </div>
