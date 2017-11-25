@@ -1,7 +1,8 @@
 @extends('layouts/app')
 
 @section('content')
-    <form action="{{ route('cañoneras.action.crear') }}" method="post">
+    <form action="{{ route('cañoneras.action.crear') }}" method="POST">
+        {{csrf_field()}}
         <fieldset>
             <h3>Crear cañonera</h3>
             <div class="form-group">

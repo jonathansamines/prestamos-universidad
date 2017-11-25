@@ -2,6 +2,7 @@
 
 @section('content')
     <form action="{{ route('cañoneras.action.editar', $cañonera->id) }}" method="post">
+        {{csrf_field()}}
         <fieldset>
             <h3>Actualizar Información Cañonera</h3>
             <div class="form-group">

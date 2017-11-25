@@ -31,6 +31,7 @@
                             <a title="Editar Información" href="{{ route('cañoneras.editar', $cañonera->id) }}" class="btn btn-sm btn-outline-info">
                                 <span class="oi oi-pencil"></span>
                             </a>
+
                             <a title="Eliminar Cañonera" href="{{ route('cañoneras.eliminar', $cañonera->id) }}" class="btn btn-sm btn-outline-danger">
                                 <span class="oi oi-trash"></span>
                             </a>

@@ -51,17 +51,17 @@ Route::group([ 'prefix' => 'cañoneras', 'as' => 'cañoneras.'], function() {
         'as' => 'action.crear'
     ]);
 
-    Route::get('/eliminar/{id}', [
+    Route::get('/{id}/eliminar', [
         'uses' => 'CañoneraController@eliminar',
         'as' => 'eliminar'
     ]);
 
-    Route::get('/editar/{id}', [
+    Route::get('/{id}/editar', [
         'uses' => 'CañoneraController@editar',
         'as' => 'editar'
     ]);
 
-    Route::post('/editar/{id}', [
+    Route::post('/{id}/editar', [
         'uses' => 'CañoneraController@editarCañonera',
         'as' => 'action.editar'
     ]);
@@ -78,12 +78,12 @@ Route::group([ 'prefix' => 'personas', 'as' => 'personas.'], function() {
         'as' => 'crear'
     ]);
 
-    Route::get('/eliminar/{id}', [
+    Route::get('/{id}/eliminar', [
         'uses' => 'PersonaController@eliminar',
         'as' => 'eliminar'
     ]);
 
-    Route::get('/editar/{id}', [
+    Route::get('/{id}/editar', [
         'uses' => 'PersonaController@editar',
         'as' => 'editar'
     ]);
@@ -100,12 +100,12 @@ Route::group([ 'prefix' => 'facultades', 'as' => 'facultades.'], function() {
         'as' => 'crear'
     ]);
 
-    Route::get('/eliminar/{id}', [
+    Route::get('/{id}/eliminar', [
         'uses' => 'FacultadController@eliminar',
         'as' => 'eliminar'
     ]);
 
-    Route::get('/editar/{id}', [
+    Route::get('/{id}/editar', [
         'uses' => 'FacultadController@editar',
         'as' => 'editar'
     ]);

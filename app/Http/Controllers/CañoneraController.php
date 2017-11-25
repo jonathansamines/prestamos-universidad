@@ -16,10 +16,14 @@ class CañoneraController extends Controller
         return view('cañoneras/crear');
     }
 
-    public function crearCañonera($cañonera) {
-        Cañonera::new($cañonera);
+    public function crearCañonera() {
+        Cañonera::create([
+            'modelo' => request('modelo'),
+            'marca' => request('marca'),
+            'color' => request('color')
+        ]);
 
-        return redirect('cañoneras/index');
+        return redirect()->route('cañoneras.index');
     }
 
     public function editar($id) {
@@ -28,9 +32,20 @@ class CañoneraController extends Controller
         return view('cañoneras/editar', compact('cañonera'));
     }
 
-    public function eliminar($id) {
-        Cañonera::delete($id);
+    public function editarCañonera($id) {
+        $cañonera = Cañonera::find($id);
 
-        return redirect('cañoneras/index');
+        $cañonera->modelo = request('modelo');
+        $cañonera->marca = request('marca');
+        $cañonera->color = request('color');
+        $cañonera->save();
+
+        return redirect()->route('cañoneras.index');
+    }
+
+    public function eliminar($id) {
+        $cañonera = Cañonera::destroy($id);
+
+        return redirect()->route('cañoneras.index');
     }
 }
