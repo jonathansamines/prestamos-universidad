@@ -74,8 +74,13 @@ Route::group([ 'prefix' => 'personas', 'as' => 'personas.'], function() {
     ]);
 
     Route::get('/crear', [
-        'uses' => 'PersonaController@nuevo',
+        'uses' => 'PersonaController@crear',
         'as' => 'crear'
+    ]);
+
+    Route::post('/crear', [
+        'uses' => 'PersonaController@crearPersona',
+        'as' => 'action.crear'
     ]);
 
     Route::get('/{id}/eliminar', [
@@ -86,6 +91,11 @@ Route::group([ 'prefix' => 'personas', 'as' => 'personas.'], function() {
     Route::get('/{id}/editar', [
         'uses' => 'PersonaController@editar',
         'as' => 'editar'
+    ]);
+
+    Route::post('/{id}/editar', [
+        'uses' => 'PersonaController@editarPersona',
+        'as' => 'action.editar'
     ]);
 });
 

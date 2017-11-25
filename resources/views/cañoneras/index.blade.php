@@ -5,7 +5,7 @@
         <h3 class="toolbar-title">Catalogo de Cañoneras</h3>
         <div class="toolbar-content">
             <a href="{{ route('cañoneras.crear') }}" role="button" class="btn btn-outline-success">
-                Nueva Cañonera
+                Crear Cañonera
             </a>
         </div>
     </aside>
