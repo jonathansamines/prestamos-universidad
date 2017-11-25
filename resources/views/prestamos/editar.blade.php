@@ -42,7 +42,7 @@
                 <textarea class="form-control" name="observaciones" id="observaciones" placeholder="Ingrese observaciones respecto al prestamo" required>{{$prestamo->observaciones}}</textarea>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Crear Prestamo</button>
+                <button type="submit" class="btn btn-primary">Actualizar Prestamo</button>
             </div>
         </fieldset>
     </form>
